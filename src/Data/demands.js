@@ -652,6 +652,58 @@ export const tunnel = [
 	},
 ];
 
+//防洪模式
+export const flood = [
+	{
+		id: 1,
+		name: '水域检测(雨后数据)',
+		checked: [],
+		children: [
+			{
+				id: 42,
+				name: '手动输入',
+				checked: [],
+			}
+		]
+	},
+	{
+		id: 2,
+		name: '水域历史数据',
+		checked: [],
+		children: [
+			{
+				id: 42,
+				name: '手动输入',
+				checked: [],
+			}
+		]
+	},
+	{
+		id: 3,
+		name: '周边沉降检测',
+		checked: [],
+		children: [
+			{
+				id: 42,
+				name: '手动输入',
+				checked: [],
+			}
+		]
+	},
+	{
+		id: 4,
+		name: '地址灾害风险分析',
+		checked: [],
+		children: [
+			{
+				id: 42,
+				name: '手动输入',
+				checked: [],
+			}
+		]
+	},
+];
+
 let data = {
 	jiyunheqiaoliang: river,
 	liangshan: bridge,
@@ -662,7 +714,21 @@ let data = {
 	qijialinerhao: tunnel,
 	matouyusuidao: tunnel,
 	guanlianzishan: sideSlope,
-	hangushuichang: reservoir
+	hangushuichang: reservoir,
+	rain_shuiku:flood,
+	rain_daihe1:flood,
+	rain_daihe2:flood,
+	rain_daihe3:flood,
+	rain_daihe4:flood,
+	rain_shahe1:flood,
+	rain_shahe2:flood,
+	rain_shahe3:flood,
+	rain_shahe4:flood,
+	rain_jiyunhe1:flood,
+	rain_jiyunhe2:flood,
+	rain_jiyunhe3:flood,
+	rain_jiyunhe4:flood,
+	rain_jiyunhe5:flood
 }
 
 export function selectData(key) {

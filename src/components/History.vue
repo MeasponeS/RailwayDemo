@@ -23,6 +23,7 @@
 		name: "History",
         props: ['type'],
         data () {
+
 		    return {
 		    	value: '',
 			    options: [],
@@ -50,11 +51,12 @@
 		        	this.$emit('changeTab',3, 'active');
 		        	return
                 }
-		        // _.map(history, item=> {
-		        // 	if (item.date === e) {
-		        // 		this.innerContentUrl = item.img
-                //     }
-                // })
+		        _.map(this.options, item=> {
+                        if (item.date == e) {
+                            this.innerContentUrl = item.img
+                        }
+
+                })
 	        }
         }
 	}

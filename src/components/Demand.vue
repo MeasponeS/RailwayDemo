@@ -128,7 +128,7 @@
         },
         computed : {
 	        isShowWhite () {
-	        	let ary = [12,22,32];
+	        	let ary = [12,22,32,42];
 		        return ary.includes(this.checkedThird[0])
 	        },
         },
