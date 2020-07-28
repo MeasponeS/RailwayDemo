@@ -22,6 +22,11 @@ let daihe19 = require('../assets/history/daihe2019.png')
 let shuiku17 = require('../assets/history/shuiku2017.png')
 let shuiku18 = require('../assets/history/shuiku2018.png')
 let shuiku19 = require('../assets/history/shuiku2019.png')
+let tafang2018 = require('../assets/history/tafang201806.png')
+let tafang2019 = require('../assets/history/tafang201907.png')
+let shigong04 = require('../assets/history/shigong201904.png')
+let shigong07 = require('../assets/history/shigong201907.png')
+
 
 const hangushuichangImg = [
 	{
@@ -121,6 +126,20 @@ const daiheImg = [
 	{
 		date: '2020-07-14',
 		img: daihe
+	},
+	{
+		date: '新增需求',
+		img: ''
+	}
+]
+const shigongImg = [
+	{
+		date: '2019.04',
+		img: shigong04
+	},
+	{
+		date: '2019.07',
+		img: shigong07
 	},
 	{
 		date: '新增需求',
@@ -382,6 +401,20 @@ const rain_shuikuImg = [
 		img: ''
 	}
 ]
+const rain_tafangImg = [
+	{
+		date: '2019-07-01',
+		img: tafang2019
+	},
+	{
+		date: '2018-06-01',
+		img: tafang2018
+	},
+	{
+		date: '新增需求',
+		img: ''
+	}
+]
 export const historyInfo = {
 	daiheImg,
 	liangshanImg,
@@ -393,6 +426,7 @@ export const historyInfo = {
 	qijialinerhaoImg,
 	guanlianzishanImg,
 	shaheImg,
+	shigongImg,
 	rain_shuikuImg,
 	rain_daihe1Img,
 	rain_daihe2Img,
@@ -407,4 +441,5 @@ export const historyInfo = {
 	rain_jiyunhe3Img,
 	rain_jiyunhe4Img,
 	rain_jiyunhe5Img,
+	rain_tafangImg
 }

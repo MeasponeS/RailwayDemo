@@ -13,7 +13,7 @@
                             <div class="name">{{item.name}}</div>
                             <div class="floodInput" v-if="!item.children.length && isShowEditDistance(item)">
                                 <el-input class="write" v-model="item.value" type="number" />
-                                公里（铁路两侧）
+                                {{item.text}}
                             </div>
                             <el-checkbox-group
                                     v-model="item.checked"

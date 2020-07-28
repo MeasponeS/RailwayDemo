@@ -8,6 +8,7 @@ let matouyusuidao = require('../assets/baseInfo/rd_matouyusuidao.png')
 let liangshan = require('../assets/baseInfo/rd_liangshan.png')
 let hulushansuidao = require('../assets/baseInfo/rd_hulushansuidao.png')
 let daihe = require('../assets/baseInfo/rd_daihe.png')
+let shigong = require('../assets/baseInfo/rd_shigong.png')
 
 let rain_shuiku = require('../assets/baseInfo/rb_rain_shuiku.png')
 let rain_daihe1 = require('../assets/baseInfo/rb_rain_daihe.png')
@@ -23,6 +24,8 @@ let rain_jiyunhe2 = require('../assets/baseInfo/rb_rain_jiyunhe.png')
 let rain_jiyunhe3 = require('../assets/baseInfo/rb_rain_jiyunhe.png')
 let rain_jiyunhe4 = require('../assets/baseInfo/rb_rain_jiyunhe.png')
 let rain_jiyunhe5 = require('../assets/baseInfo/rb_rain_jiyunhe.png')
+let rain_tafang = require('../assets/baseInfo/rb_tafang.png')
+
 export const baseImages = {
 	hangushuichang,
 	jiyunheqiaoliang,
@@ -48,4 +51,6 @@ export const baseImages = {
 	rain_jiyunhe3,
 	rain_jiyunhe4,
 	rain_jiyunhe5,
+	rain_tafang,
+	shigong
 }

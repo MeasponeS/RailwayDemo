@@ -7,7 +7,7 @@
         <div :class="show? 'in all' : 'all'" v-else >
             <div v-if="!showFlood">
                 <div v-for="item in details" :class="'items ' + item" @click="showDetailsDialog(item)"></div>
-                <img class="backImage" src="./assets/imgs/rd_back.jpg" alt="">
+                <img class="backImage" src="./assets/imgs/rd_back.png" alt="">
                 <img src="./assets/imgs/rd_btn1.png" @click="showWatchDialog" alt="" class="btn btn_weather">
                 <img src="./assets/imgs/rd_btn2.png" @click="showTodoDialog" alt="" class="btn btn2">
                 <!-- 防洪预警-->
@@ -70,7 +70,8 @@
                     'liangshan',
                     'matouyusuidao',
                     'qijialinerhao',
-                    'shahe'
+                    'shahe',
+                    'shigong'
                 ],
                 rainDetails: [
                     'rain_shuiku',
@@ -86,7 +87,8 @@
                     'rain_jiyunhe2',
                     'rain_jiyunhe3',
                     'rain_jiyunhe4',
-                    'rain_jiyunhe5'
+                    'rain_jiyunhe5',
+                    'rain_tafang'
 
                 ]
             }
@@ -383,6 +385,20 @@
             left: 16.5%;
             top: 60%;
         }
+        .rain_tafang{
+            width: 60px;
+            height: 60px;
+            //background: #1677ff;
+            left: 71%;
+            top: 19%;
+        }
+        .shigong{
+            width: 150px;
+            height: 130px;
+            //background: yellow;
+            left: 53%;
+            top: 24%;
+        }
         .btn_testing{
             top: 69%;
             right: 5vw;
@@ -391,5 +407,6 @@
             top: 77%;
             right: 5vw;
         }
+
     }
 </style>

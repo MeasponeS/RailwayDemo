@@ -659,6 +659,7 @@ export const flood = [
 		name: '水域检测(雨后数据)',
 		checked: [],
 		value: '',
+		text: '公里（铁路两侧）',
 		children: [],
 		isFlood: true
 	},
@@ -667,6 +668,7 @@ export const flood = [
 		name: '水域历史数据',
 		checked: [],
 		value: '',
+		text: '公里（铁路两侧）',
 		children: [],
 		isFlood: true
 	},
@@ -675,18 +677,64 @@ export const flood = [
 		name: '周边沉降检测',
 		checked: [],
 		value: '',
+		text: '公里（铁路两侧）',
 		children: [],
 		isFlood: true
 	},
 	{
 		id: 400,
-		name: '地址灾害风险分析',
+		name: '地质灾害风险分析',
 		checked: [],
 		value: '',
+		text: '公里（铁路两侧）',
 		children: [],
 		isFlood: true
 	},
 ];
+
+// 塌方
+export const tafang = [
+	{
+		id: 100,
+		name: '周边形变监测(雨后数据)',
+		checked: [],
+		value: '',
+		text: '公里（铁路两侧）',
+		children: [],
+		isFlood: true
+	},
+	{
+		id: 400,
+		name: '地质灾害风险分析',
+		checked: [],
+		value: '',
+		text: '公里（铁路两侧）',
+		children: [],
+		isFlood: true
+	},
+];
+
+// 施工
+export const shigong = [
+	{
+		id: 100,
+		name: '形变监测',
+		checked: [],
+		value: '',
+		children: [],
+		text: '天后',
+		isFlood: true
+	},
+	{
+		id: 400,
+		name: '影像监测',
+		checked: [],
+		value: '',
+		text: '天后',
+		children: [],
+		isFlood: true
+	},
+]
 
 let data = {
 	jiyunheqiaoliang: river,
@@ -699,6 +747,7 @@ let data = {
 	matouyusuidao: tunnel,
 	guanlianzishan: sideSlope,
 	hangushuichang: reservoir,
+	shigong: shigong,
 	rain_shuiku:flood,
 	rain_daihe1:flood,
 	rain_daihe2:flood,
@@ -712,7 +761,8 @@ let data = {
 	rain_jiyunhe2:flood,
 	rain_jiyunhe3:flood,
 	rain_jiyunhe4:flood,
-	rain_jiyunhe5:flood
+	rain_jiyunhe5:flood,
+	rain_tafang: tafang,
 }
 
 export function selectData(key) {
