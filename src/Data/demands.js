@@ -655,52 +655,36 @@ export const tunnel = [
 //防洪模式
 export const flood = [
 	{
-		id: 1,
+		id: 100,
 		name: '水域检测(雨后数据)',
 		checked: [],
-		children: [
-			{
-				id: 42,
-				name: '手动输入',
-				checked: [],
-			}
-		]
+		value: '',
+		children: [],
+		isFlood: true
 	},
 	{
-		id: 2,
+		id: 200,
 		name: '水域历史数据',
 		checked: [],
-		children: [
-			{
-				id: 42,
-				name: '手动输入',
-				checked: [],
-			}
-		]
+		value: '',
+		children: [],
+		isFlood: true
 	},
 	{
-		id: 3,
+		id: 300,
 		name: '周边沉降检测',
 		checked: [],
-		children: [
-			{
-				id: 42,
-				name: '手动输入',
-				checked: [],
-			}
-		]
+		value: '',
+		children: [],
+		isFlood: true
 	},
 	{
-		id: 4,
+		id: 400,
 		name: '地址灾害风险分析',
 		checked: [],
-		children: [
-			{
-				id: 42,
-				name: '手动输入',
-				checked: [],
-			}
-		]
+		value: '',
+		children: [],
+		isFlood: true
 	},
 ];
 
@@ -732,6 +716,5 @@ let data = {
 }
 
 export function selectData(key) {
-	console.log(key, '????');
 	return data[key]
 }

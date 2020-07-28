@@ -24,7 +24,7 @@
                     <h4>请选择监测内容：</h4>
                     <el-checkbox class="checkBox" :disabled="true" :checked="true"><span class="name">形变速率</span></el-checkbox>
                     <el-checkbox class="checkBox" v-model="leijixingbianliang"><span class="name">累计变形量</span></el-checkbox>
-                    <el-checkbox class="checkBox" v-model="huanjinganquan"><span class="name">环境安全</span></el-checkbox>
+                    <el-checkbox class="checkBox" v-model="huanjinganquan"><span class="name">环境安全（包含彩钢房）</span></el-checkbox>
                 </div>
                 <div class="areaRight">
                     <img src="../assets/imgs/rd_thumbil.png" alt="">
@@ -196,6 +196,10 @@
                                 left: 8px;
                             }
                         }
+                    }
+                    i{
+                        color: red;
+                        font-style: normal;
                     }
                 }
             }

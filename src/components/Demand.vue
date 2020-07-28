@@ -8,27 +8,29 @@
                 <div class="tips" >
                     <el-checkbox-group
                             v-model="checked"
-                            :min="0"
-                            :max="1"
                             class="group">
-                        <el-checkbox class="checkBox" v-for="item in commonList" :label="item.id" :key="item.id" @change="selectedChange('first')">
+                        <el-checkbox :class="item.children.length ? 'checkBox': 'checkBox floodCheckBox'" v-for="item in commonList" :label="item.id" :key="item.id" @change="selectedChange('first')">
                             <div class="name">{{item.name}}</div>
+                            <div class="floodInput" v-if="!item.children.length && isShowEditDistance(item)">
+                                <el-input class="write" v-model="item.value" type="number" />
+                                公里（铁路两侧）
+                            </div>
                             <el-checkbox-group
-                                    v-model="checkedSecond"
+                                    v-model="item.checked"
                                     :min="0"
                                     v-if="isChecked(item, checked)"
                                     :max="1">
                                 <el-checkbox class="checkBox" v-for="second in item.children" :label="second.id" :key="second.id" @change="selectedChange('second')">
                                     <div class="name">{{second.name}}</div>
                                     <el-checkbox-group
-                                            v-model="checkedThird"
-                                            :min="0"
-                                            v-if="isChecked(second, checkedSecond)"
+                                            v-model="second.checked"
+                                            :min="0"s
+                                            v-if="isChecked(second, item.checked)"
                                             :max="1">
                                         <el-checkbox class="checkBox" v-for="third in second.children" :label="third.id" :key="third.id">
                                             <div class="name">{{third.name}}</div>
                                         </el-checkbox>
-                                        <el-input v-if="isShowWhite" class="write" v-model="inputValue" />
+                                        <el-input v-if="isShowWhite(second.checked)" class="write" v-model="inputValue" />
                                     </el-checkbox-group>
                                 </el-checkbox>
                             </el-checkbox-group>
@@ -127,10 +129,7 @@
             }
         },
         computed : {
-	        isShowWhite () {
-	        	let ary = [12,22,32,42];
-		        return ary.includes(this.checkedThird[0])
-	        },
+
         },
         watch: {
 	        tab (val) {
@@ -138,9 +137,14 @@
             }
         },
         methods: {
-
+	        isShowEditDistance (item) {
+		        return this.checked.includes(item.id) && item.isFlood
+	        },
+	        isShowWhite (item) {
+		        let ary = [12,22,32,42];
+		        return ary.includes(item[0])
+	        },
 	        selectedChange (index) {
-		        console.log(index, '======>>>>>>>>>>>>');
 		        if (index === 'first') {
 					this.checkedSecond = [];
                 } else if (index === 'second') {
@@ -349,5 +353,29 @@
         }
 
     }
+    .floodCheckBox{
+        .el-checkbox__label{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .floodInput{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: #000;
+            transform: translateY(-6px);
+            margin-left: 10px;
+            .el-input{
+                transform: translateY(0);
+                margin-right: 6px;
+                input{
+                    width: 80px;
+                }
+            }
+        }
+    }
+
+
 
 </style>
