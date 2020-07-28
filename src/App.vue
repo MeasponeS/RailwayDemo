@@ -1,8 +1,5 @@
 <template>
     <div id="app">
-<!--        <el-button @click="showDetailsDialog">点我</el-button>-->
-
-
         <div :class="show? 'in old' : 'old'" v-if="!show" @click="show = true">
             <img src="./assets/imgs/rd_old_back.png" alt="">
 <!--     进入页面的大图       -->
