@@ -1,20 +1,20 @@
 <template>
     <el-dialog
-        :visible.sync="show"
-        width="70%"
-        @close="cancel"
-        top="4vh"
-        center>
+            :visible.sync="show"
+            width="30%"
+            @close="cancel"
+            center>
         <h3 class="rainTodoTitle">天气预测</h3>
-        <div class="rainTodoTable">
-            <h4>请选择监测内容：</h4>
+        <div class="rainTodoTable1">
+            <h4>请选择预测天气时间：</h4>
             <el-radio-group v-model="radio">
-                <el-radio :label="1">1-3天</el-radio><br>
-                <el-radio :label="2">3-5天</el-radio><br>
-                <el-radio :label="3">5-7天</el-radio><br>
-                <el-radio :label="4">7-15天</el-radio><br>
+                <el-radio :label="1">今天</el-radio><br>
+                <el-radio :label="2">三天后</el-radio><br>
+                <el-radio :label="3">七天后</el-radio><br>
+                <el-radio :label="4">十四天后</el-radio><br>
             </el-radio-group>
             <div class="bottom">
+                <el-button class="submit" @click="cancel">取消</el-button>
                 <el-button class="submit" @click="submit">提交</el-button>
             </div>
         </div>
@@ -70,21 +70,20 @@
 <style  lang="less">
     .rainTodoTitle{
         width: 100%;
-        height: 12.3vh;
+        height: 7.3vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 24px;
+        font-size: 18px;
         color: #030303;
         margin: 0;
+        border-bottom: 1px solid #f2f2f2;
     }
-    .rainTodoTable{
+    .rainTodoTable1{
         width: 100%;
-        height: 74vh;
         overflow: auto;
-        padding: 0 46px;
+        padding: 0 26px;
         box-sizing: border-box;
-        margin-bottom: 52px;
         thead{
             tr{
                 th{
@@ -102,6 +101,12 @@
                 }
             }
         }
+        .el-radio-group{
+            padding: 0 20px;
+            .el-radio{
+                margin-bottom: 10px;
+            }
+        }
     }
 
     .bottom{
@@ -109,16 +114,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 54px 0 ;
+        margin: 30px 0 ;
         .submit{
-            width: 260px;
-            height: 47px;
+            width: 120px;
+            height: 39px;
             background: #1677ff;
             color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 6px;
+            &:first-child{
+                background: #fff;
+                color: #1677ff;
+                border-color: #1677ff;
+            }
         }
     }
 
